@@ -61,4 +61,10 @@ public class HumanPaddle implements Paddle {
     public int getY() {
         return (int)y;
     }
+    @Override
+    public int getX() {
+        return (int)x;
+    }
+
+
 }

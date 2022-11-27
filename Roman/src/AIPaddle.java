@@ -41,4 +41,11 @@ public class AIPaddle implements Paddle {
     public int getY() {
         return (int)y;
     }
+
+    @Override
+    // was added
+    public int getX() {
+        return (int)x;
+    }
+
 }
