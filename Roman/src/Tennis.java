@@ -9,18 +9,17 @@ public class Tennis extends JFrame implements Runnable, KeyListener {
     HumanPaddle p1;
     AIPaddle p2;
     Ball b1;
-    ScoreBoard s1;
     boolean gameStarted;
     Graphics gfx;
     Image img;
 
-    final int WIDTH = 700, HEIGHT = 500;
+    static final int WIDTH = 700;
+    final int HEIGHT = 500;
     public Tennis() {
         gameStarted = false;
         p1 = new HumanPaddle(1);
         b1 = new Ball();
         p2 = new AIPaddle(2, b1);
-        s1 = new ScoreBoard();
         //img = createImage(WIDTH, HEIGHT);
         //gfx = img.getGraphics();
         //fontTitle = new Font();
@@ -50,24 +49,7 @@ public class Tennis extends JFrame implements Runnable, KeyListener {
             p1.draw(g);
             b1.draw(g);
             p2.draw(g);
-
         }
-        // trying to find collision
-        // checking that getX of paddle and getX of the ball is equal
-        // checking the get Y was equal
-        // didn't work for some reason
-        //
-       // while(b1.getX()-10  p1.getX()){
-         //   s1.update();
-
-        //System.out.println(b1.getX());
-        //System.out.println(p1.getX());
-
-
-            //p1.getX() - b1.getX < 5 and p1.getX() - b1.getY() < 5
-
-
-
         if (!gameStarted) {
             g.setColor(Color.white);
             g.setFont(new Font("Monospaced", Font.PLAIN, 18));
