@@ -56,7 +56,7 @@ public class MenuPanel extends JPanel implements Runnable{
             } else if (e.getKeyCode() == KeyEvent.VK_2) {
                gameChoice=2;
                 PongGame.mFrame.dispose();
-              //  GameFrame2 frame=new GameFrame2();
+                GameFrame2 frame=new GameFrame2();
 
             } else if (e.getKeyCode() == KeyEvent.VK_0) {
                 System.exit(0);
