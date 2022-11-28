@@ -45,7 +45,7 @@ public class AIPaddle implements Paddle {
     @Override
     // was added
     public int getX() {
-        return (int)x;
+        return x;
     }
 
 }

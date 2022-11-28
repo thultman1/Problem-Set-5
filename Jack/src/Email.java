@@ -2,15 +2,15 @@
 import java.util.Scanner;
 
 public class Email {
-    private String firstName;
-    private String lastName;
+    private final String firstName;
+    private final String lastName;
     private String password;
-    private String department;
-    private String email;
+    private final String department;
+    private final String email;
     private int mailboxCapacity = 500;
-    private int defaultPasswordLength = 10;
+    private final int defaultPasswordLength = 10;
     private String alternateEmail;
-    private String companySuffix = "company.com";
+    private final String companySuffix = "company.com";
 
     //set up constructor to take in first and last name
     public Email(String firstName, String lastName) {

@@ -63,7 +63,7 @@ public class HumanPaddle implements Paddle {
     }
     @Override
     public int getX() {
-        return (int)x;
+        return x;
     }
 
 
