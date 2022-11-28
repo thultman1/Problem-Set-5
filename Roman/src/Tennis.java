@@ -12,6 +12,7 @@ public class Tennis extends JFrame implements Runnable, KeyListener {
     boolean gameStarted;
     Graphics gfx;
     Image img;
+    MainMenu menu;
 
     static final int WIDTH = 700;
     final int HEIGHT = 500;
@@ -20,6 +21,7 @@ public class Tennis extends JFrame implements Runnable, KeyListener {
         p1 = new HumanPaddle(1);
         b1 = new Ball();
         p2 = new AIPaddle(2, b1);
+        //menu = new MainMenu();
         //img = createImage(WIDTH, HEIGHT);
         //gfx = img.getGraphics();
         //fontTitle = new Font();
