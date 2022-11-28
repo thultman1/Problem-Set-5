@@ -17,6 +17,7 @@ public class GamePanel2 extends JPanel implements Runnable{
     Random random;
     Paddle paddle1;
     AIPaddle paddle2;
+    Slider slider;
     Ball ball;
     Score score;
 
@@ -37,12 +38,13 @@ public class GamePanel2 extends JPanel implements Runnable{
 
     public void newBall() {
         random = new Random();
-        ball = new Ball((GAME_WIDTH/2)-(BALL_DIAMETER/2),random.nextInt(GAME_HEIGHT-BALL_DIAMETER),BALL_DIAMETER,BALL_DIAMETER);
+        ball = new Ball((GAME_WIDTH/2)-(BALL_DIAMETER/2),random.nextInt(GAME_HEIGHT-BALL_DIAMETER),BALL_DIAMETER,BALL_DIAMETER,2);
     }
     public void newPaddles() {
-        paddle1 = new Paddle(0,(GAME_HEIGHT/2)-(PADDLE_HEIGHT/2),PADDLE_WIDTH,PADDLE_HEIGHT,1);
+        paddle1 = new Paddle(0,((GAME_HEIGHT/2)-(PADDLE_HEIGHT/2))-100,PADDLE_WIDTH,PADDLE_HEIGHT,1);
 
-        paddle2 = new AIPaddle(GAME_WIDTH-PADDLE_WIDTH,(GAME_HEIGHT/2)-(PADDLE_HEIGHT/2),PADDLE_WIDTH,PADDLE_HEIGHT);
+        paddle2 = new AIPaddle(GAME_WIDTH-PADDLE_WIDTH,(GAME_HEIGHT/2)-(PADDLE_HEIGHT/2)-1000,PADDLE_WIDTH,PADDLE_HEIGHT+10000);
+        slider = new Slider(GAME_WIDTH-PADDLE_WIDTH,(GAME_HEIGHT/2)-(PADDLE_HEIGHT/2)-1000,PADDLE_WIDTH,PADDLE_HEIGHT+10000);
     }
     public void paint(Graphics g) {
         image = createImage(getWidth(),getHeight());
@@ -54,6 +56,7 @@ public class GamePanel2 extends JPanel implements Runnable{
 
         paddle1.draw(g);
         paddle2.draw(g);
+        slider.draw(g);
         ball.draw(g);
         score.draw(g);
 
@@ -64,6 +67,7 @@ public class GamePanel2 extends JPanel implements Runnable{
     public void move() {
         paddle1.move();
         AIPaddle.y=ball.y-40;
+        Slider.y=ball.y+60;
         ball.move();
     }
     public void checkCollision() {

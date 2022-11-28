@@ -27,6 +27,7 @@ public class GamePanel1 extends JPanel implements Runnable{
         newBall();
         score = new Score(GAME_WIDTH,GAME_HEIGHT);
 
+
         this.setFocusable(true);
         this.addKeyListener(new AL());
         this.setPreferredSize(SCREEN_SIZE);
@@ -37,7 +38,9 @@ public class GamePanel1 extends JPanel implements Runnable{
 
     public void newBall() {
         random = new Random();
-        ball = new Ball((GAME_WIDTH/2)-(BALL_DIAMETER/2),random.nextInt(GAME_HEIGHT-BALL_DIAMETER),BALL_DIAMETER,BALL_DIAMETER);
+
+        ball = new Ball((GAME_WIDTH/2)-(BALL_DIAMETER/2),random.nextInt(GAME_HEIGHT-BALL_DIAMETER),BALL_DIAMETER,BALL_DIAMETER,5);
+
     }
     public void newPaddles() {
         paddle1 = new Paddle(0,(GAME_HEIGHT/2)-(PADDLE_HEIGHT/2),PADDLE_WIDTH,PADDLE_HEIGHT,1);
@@ -57,7 +60,7 @@ public class GamePanel1 extends JPanel implements Runnable{
         score.draw(g);
 
 
-        Toolkit.getDefaultToolkit().sync(); // I forgot to add this line of code in the video, it helps with the animation
+        Toolkit.getDefaultToolkit().sync();
 
     }
     public void move() {
@@ -77,21 +80,13 @@ public class GamePanel1 extends JPanel implements Runnable{
         //bounce ball off paddles
         if(ball.intersects(paddle1)) {
             ball.xVelocity = Math.abs(ball.xVelocity);
-            ball.xVelocity++; //optional for more difficulty
-            if(ball.yVelocity>0)
-                ball.yVelocity++; //optional for more difficulty
-            else
-                ball.yVelocity--;
+
             ball.setXDirection(ball.xVelocity);
             ball.setYDirection(ball.yVelocity);
         }
         if(ball.intersects(paddle2)) {
             ball.xVelocity = Math.abs(ball.xVelocity);
-            ball.xVelocity++; //optional for more difficulty
-            if(ball.yVelocity>0)
-                ball.yVelocity++; //optional for more difficulty
-            else
-                ball.yVelocity--;
+
             ball.setXDirection(-ball.xVelocity);
             ball.setYDirection(ball.yVelocity);
         }

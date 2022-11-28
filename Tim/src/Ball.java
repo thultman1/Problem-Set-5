@@ -3,14 +3,14 @@ import java.util.*;
 
 public class Ball extends Rectangle{
 
-    //
     Random random;
     int xVelocity;
     int yVelocity;
-    int initialSpeed = 2;
+   int initialSpeed;
 
-    Ball(int x, int y, int width, int height){
+    Ball(int x, int y, int width, int height, int initialSpeed){
         super(x,y,width,height);
+        this.initialSpeed=initialSpeed;
         random = new Random();
         int randomXDirection = random.nextInt(2);
         if(randomXDirection == 0)
@@ -34,6 +34,8 @@ public class Ball extends Rectangle{
         x += xVelocity;
         y += yVelocity;
     }
+
+
     public void draw(Graphics g) {
         g.setColor(Color.white);
         g.fillOval(x, y, height, width);
