@@ -3,7 +3,7 @@ import java.awt.event.*;
 import java.util.*;
 import javax.swing.*;
 
-public class GamePanel extends JPanel implements Runnable{
+public class GamePanel1 extends JPanel implements Runnable{
 
     static final int GAME_WIDTH = 1000;
     static final int GAME_HEIGHT = (int)(GAME_WIDTH * (0.5555));
@@ -21,18 +21,18 @@ public class GamePanel extends JPanel implements Runnable{
     Score score;
 
 
-    GamePanel(){
+    GamePanel1(){
 
         newPaddles();
-  newBall();
-      score = new Score(GAME_WIDTH,GAME_HEIGHT);
-       // mainMenu = new MainMenu(GAME_WIDTH,GAME_HEIGHT);
+        newBall();
+        score = new Score(GAME_WIDTH,GAME_HEIGHT);
+
         this.setFocusable(true);
         this.addKeyListener(new AL());
         this.setPreferredSize(SCREEN_SIZE);
 
         gameThread = new Thread(this);
-       gameThread.start();
+        gameThread.start();
     }
 
     public void newBall() {
@@ -50,7 +50,7 @@ public class GamePanel extends JPanel implements Runnable{
         g.drawImage(image,0,0,this);
     }
     public void draw(Graphics g) {
-       // mainMenu.draw(g);
+        // mainMenu.draw(g);
         paddle1.draw(g);
         paddle2.draw(g);
         ball.draw(g);

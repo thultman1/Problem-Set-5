@@ -36,7 +36,7 @@ public class MenuPanel extends JPanel implements Runnable{
     }
     public void draw(Graphics g) {
         mainMenu.draw(g);
-        Toolkit.getDefaultToolkit().sync(); // I forgot to add this line of code in the video, it helps with the animation
+        Toolkit.getDefaultToolkit().sync();
     }
 
 
@@ -51,12 +51,12 @@ public class MenuPanel extends JPanel implements Runnable{
             if(e.getKeyCode() == KeyEvent.VK_1) {
                 gameChoice=1;
                 PongGame.mFrame.dispose();
-                GameFrame frame=new GameFrame();
-
+                GameFrame1 frame=new GameFrame1();
 
             } else if (e.getKeyCode() == KeyEvent.VK_2) {
                gameChoice=2;
-
+                PongGame.mFrame.dispose();
+              //  GameFrame2 frame=new GameFrame2();
 
             } else if (e.getKeyCode() == KeyEvent.VK_0) {
                 System.exit(0);

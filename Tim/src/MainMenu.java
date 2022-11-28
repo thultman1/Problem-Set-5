@@ -18,6 +18,7 @@ public class MainMenu extends Rectangle{
         g.setFont(new Font("Monospaced", Font.ITALIC, 18));
         g.drawString("Press 1 to play 2v2", 425, 260);
         g.drawString("Press 2 to play survival", 425, 290);
+        g.drawString("Press 0 to exit", 425, 320);
 
 
     }
