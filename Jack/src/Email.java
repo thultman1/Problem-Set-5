@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-public class Email {
-}
-=======
+
 import java.util.Scanner;
 
 public class Email {
@@ -83,5 +80,3 @@ public class Email {
 
 
 
-
->>>>>>> origin/master
