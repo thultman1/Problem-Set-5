@@ -2,12 +2,8 @@ import java.awt.*;
 import javax.swing.*;
 
 public class GameFrame extends JFrame{
-
     GamePanel panel;
-
-
     GameFrame(){
-        //if(gameRunning==true) {
             panel = new GamePanel();
             this.add(panel);
             this.setTitle("Pong Game");
@@ -17,7 +13,7 @@ public class GameFrame extends JFrame{
             this.pack();
             this.setVisible(true);
             this.setLocationRelativeTo(null);
-      //  }
+
     }
 
 

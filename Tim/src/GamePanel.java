@@ -20,16 +20,19 @@ public class GamePanel extends JPanel implements Runnable{
     Ball ball;
     Score score;
 
+
     GamePanel(){
+
         newPaddles();
-        newBall();
-        score = new Score(GAME_WIDTH,GAME_HEIGHT);
+  newBall();
+      score = new Score(GAME_WIDTH,GAME_HEIGHT);
+       // mainMenu = new MainMenu(GAME_WIDTH,GAME_HEIGHT);
         this.setFocusable(true);
         this.addKeyListener(new AL());
         this.setPreferredSize(SCREEN_SIZE);
 
         gameThread = new Thread(this);
-        gameThread.start();
+       gameThread.start();
     }
 
     public void newBall() {
@@ -47,10 +50,13 @@ public class GamePanel extends JPanel implements Runnable{
         g.drawImage(image,0,0,this);
     }
     public void draw(Graphics g) {
+       // mainMenu.draw(g);
         paddle1.draw(g);
         paddle2.draw(g);
         ball.draw(g);
         score.draw(g);
+
+
         Toolkit.getDefaultToolkit().sync(); // I forgot to add this line of code in the video, it helps with the animation
 
     }

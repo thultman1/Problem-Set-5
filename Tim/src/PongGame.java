@@ -2,22 +2,8 @@ import javax.swing.*;
 import java.awt.*;
 
 public class PongGame {
-    public static boolean gameRunning=false;
-
+    static public MenuFrame mFrame;
     public static void main(String[] args) {
-       // if(gameRunning==false) {
-           MainMenu mainMenu=new MainMenu(gameRunning);
-       // }
-
-
-    // if(gameRunning==true){
-        GameFrame frame = new GameFrame();
-
-
-
-
-
-
-
+       mFrame=new MenuFrame();
     }
 }

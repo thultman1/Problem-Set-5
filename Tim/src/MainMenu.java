@@ -1,44 +1,24 @@
 import java.awt.*;
-import javax.swing.*;
-import javax.swing.*;
-import java.awt.*;
-import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
 
-public class MainMenu extends JFrame {
-    GamePanel panel;
-    static boolean gameRunning;
-    Graphics gfx;
-    Image img;
-    Thread thread;
-    static final int WIDTH = 700;
-    final int HEIGHT = 500;
+public class MainMenu extends Rectangle{
 
-    public MainMenu(boolean gameRunning){
+    static int GAME_WIDTH;
+    static int GAME_HEIGHT;
 
-        this.gameRunning=gameRunning;
-        this.setSize(WIDTH, HEIGHT);
-        this.setTitle("Pong");
+    MainMenu(int GAME_WIDTH, int GAME_HEIGHT){
+        Score.GAME_WIDTH = GAME_WIDTH;
+        Score.GAME_HEIGHT = GAME_HEIGHT;
+    }
+    public void draw(Graphics g) {
 
-        this.setVisible(true);
-        //thread = new Thread(this);
-        thread.start();
-        gameRunning=true;
+
+        g.setColor(Color.white);
+        g.setFont(new Font("Monospaced", Font.PLAIN, 30));
+        g.drawString("PONG GAME", 425, 200);
+        g.setFont(new Font("Monospaced", Font.ITALIC, 18));
+        g.drawString("Press 1 to play 2v2", 425, 260);
+        g.drawString("Press 2 to play survival", 425, 290);
+
 
     }
-
-    public void paint(Graphics g) {
-            g.setColor(Color.white);
-            g.setFont(new Font("Monospaced", Font.PLAIN, 18));
-            g.drawString("PONG GAME", 300, 100);
-            g.setFont(new Font("Monospaced", Font.ITALIC, 14));
-            g.drawString("Press Enter to begin", 270, 130);
-    }
-
-    public boolean getGameRunning()
-    {
-        return gameRunning;
-    }
-
-
 }
