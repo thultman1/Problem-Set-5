@@ -143,7 +143,7 @@ public class GamePanel1 extends JPanel implements Runnable{
         }
         public void keyReleased(KeyEvent e) {
             paddle1.keyReleased(e);
-            paddle2.keyReleased(e);
+           paddle2.keyReleased(e);
         }
     }
 }

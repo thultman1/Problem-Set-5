@@ -16,7 +16,7 @@ public class GamePanel2 extends JPanel implements Runnable{
     Graphics graphics;
     Random random;
     Paddle paddle1;
-    Paddle paddle2;
+    AIPaddle paddle2;
     Ball ball;
     Score score;
 
@@ -41,7 +41,8 @@ public class GamePanel2 extends JPanel implements Runnable{
     }
     public void newPaddles() {
         paddle1 = new Paddle(0,(GAME_HEIGHT/2)-(PADDLE_HEIGHT/2),PADDLE_WIDTH,PADDLE_HEIGHT,1);
-        paddle2 = new Paddle(GAME_WIDTH-PADDLE_WIDTH,(GAME_HEIGHT/2)-(PADDLE_HEIGHT/2),PADDLE_WIDTH,PADDLE_HEIGHT,2);
+
+        paddle2 = new AIPaddle(GAME_WIDTH-PADDLE_WIDTH,(GAME_HEIGHT/2)-(PADDLE_HEIGHT/2),PADDLE_WIDTH,PADDLE_HEIGHT);
     }
     public void paint(Graphics g) {
         image = createImage(getWidth(),getHeight());
@@ -50,19 +51,19 @@ public class GamePanel2 extends JPanel implements Runnable{
         g.drawImage(image,0,0,this);
     }
     public void draw(Graphics g) {
-        // mainMenu.draw(g);
+
         paddle1.draw(g);
         paddle2.draw(g);
         ball.draw(g);
         score.draw(g);
 
 
-        Toolkit.getDefaultToolkit().sync(); // I forgot to add this line of code in the video, it helps with the animation
+        Toolkit.getDefaultToolkit().sync();
 
     }
     public void move() {
         paddle1.move();
-        paddle2.move();
+        AIPaddle.y=ball.y-40;
         ball.move();
     }
     public void checkCollision() {
@@ -139,11 +140,11 @@ public class GamePanel2 extends JPanel implements Runnable{
     public class AL extends KeyAdapter{
         public void keyPressed(KeyEvent e) {
             paddle1.keyPressed(e);
-            paddle2.keyPressed(e);
+          //  paddle2.keyPressed(e);
         }
         public void keyReleased(KeyEvent e) {
             paddle1.keyReleased(e);
-            paddle2.keyReleased(e);
+          //  paddle2.keyReleased(e);
         }
     }
 }
