@@ -8,7 +8,8 @@ public class HumanPaddle implements Paddle {
     int player, x;
 
     public HumanPaddle(int player) {
-        upAccel = false; downAccel = false;
+        upAccel = false;
+        downAccel = false;
         y = 210; yVel = 0;
         if (player == 1)
             x = 20;

@@ -1,4 +1,3 @@
-
 import java.awt.*;
 import java.awt.event.*;
 public class AIPaddle extends Rectangle{
@@ -18,7 +17,7 @@ public class AIPaddle extends Rectangle{
         //  y=Ball.y-40;
     }
     public void draw(Graphics g) {
-            g.setColor(Color.red);
+        g.setColor(Color.red);
         g.fillRect(x, y, width, height);
     }
 

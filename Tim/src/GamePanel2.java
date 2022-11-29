@@ -20,6 +20,7 @@ public class GamePanel2 extends JPanel implements Runnable{
     Slider slider;
     Ball ball;
     Score score;
+    Stopwatch timer;
 
 
     GamePanel2(){
@@ -27,6 +28,7 @@ public class GamePanel2 extends JPanel implements Runnable{
         newPaddles();
         newBall();
         score = new Score(GAME_WIDTH,GAME_HEIGHT);
+        timer = new Stopwatch(GAME_WIDTH, GAME_HEIGHT);
 
         this.setFocusable(true);
         this.addKeyListener(new AL());
@@ -58,7 +60,8 @@ public class GamePanel2 extends JPanel implements Runnable{
         paddle2.draw(g);
         slider.draw(g);
         ball.draw(g);
-        score.draw(g);
+        score.drawTimer(g);
+        timer.draw(g);
 
 
         Toolkit.getDefaultToolkit().sync();
@@ -109,7 +112,8 @@ public class GamePanel2 extends JPanel implements Runnable{
             paddle2.y=0;
         if(paddle2.y >= (GAME_HEIGHT-PADDLE_HEIGHT))
             paddle2.y = GAME_HEIGHT-PADDLE_HEIGHT;
-        //give a player 1 point and creates new paddles & ball
+        //no score needed for the survival mode stopwatch
+        /*
         if(ball.x <=0) {
             score.player2++;
             newPaddles();
@@ -121,7 +125,10 @@ public class GamePanel2 extends JPanel implements Runnable{
             newPaddles();
             newBall();
             System.out.println("Player 1: "+score.player1);
+
+
         }
+         */
     }
     public void run() {
         //game loop
@@ -144,11 +151,11 @@ public class GamePanel2 extends JPanel implements Runnable{
     public class AL extends KeyAdapter{
         public void keyPressed(KeyEvent e) {
             paddle1.keyPressed(e);
-          //  paddle2.keyPressed(e);
+            //  paddle2.keyPressed(e);
         }
         public void keyReleased(KeyEvent e) {
             paddle1.keyReleased(e);
-          //  paddle2.keyReleased(e);
+            //  paddle2.keyReleased(e);
         }
     }
 }
