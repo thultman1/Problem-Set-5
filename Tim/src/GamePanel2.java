@@ -113,22 +113,26 @@ public class GamePanel2 extends JPanel implements Runnable{
         if(paddle2.y >= (GAME_HEIGHT-PADDLE_HEIGHT))
             paddle2.y = GAME_HEIGHT-PADDLE_HEIGHT;
         //no score needed for the survival mode stopwatch
-        /*
+
         if(ball.x <=0) {
-            score.player2++;
+            //score.player2++;
+            timer.reset();
+            timer.start();
             newPaddles();
             newBall();
-            System.out.println("Player 2: "+score.player2);
+            //System.out.println("Player 2: "+score.player2);
         }
         if(ball.x >= GAME_WIDTH-BALL_DIAMETER) {
-            score.player1++;
+            //score.player1++;
+            timer.reset();
+            timer.start();
             newPaddles();
             newBall();
-            System.out.println("Player 1: "+score.player1);
+            //System.out.println("Player 1: "+score.player1);
 
 
         }
-         */
+
     }
     public void run() {
         //game loop

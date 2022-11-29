@@ -41,24 +41,12 @@ public class Stopwatch implements ActionListener {
         this.GAME_HEIGHT = GAME_HEIGHT;
         this.GAME_WIDTH = GAME_WIDTH;
         start();
-        /*
-        timeLabel.setText(hours_string + ":" + minutes_string + ":" + seconds_string);
-
-        timeLabel.setBounds(100, 100, 200, 100);
-        timeLabel.setFont(new Font("Verdana", Font.PLAIN, 35));
-        timeLabel.setBorder(BorderFactory.createBevelBorder(1));
-        timeLabel.setOpaque(true);
-        timeLabel.setHorizontalAlignment(JTextField.CENTER);
-        frame.add(timeLabel);
-
-        frame.setLayout(null);
-        frame.setVisible(true);
-        */
 
     }
 
     public void draw(Graphics g) {
-        g.drawString(hours_string + ":" + minutes_string + ":" + seconds_string, (GAME_WIDTH/2)-85, 50);
+        g.setFont(new Font("Consolas",Font.PLAIN,60));
+        g.drawString(hours_string + ":" + minutes_string + ":" + seconds_string, (GAME_WIDTH/2) - 130, 50);
     }
 
     /*
