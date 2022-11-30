@@ -1,3 +1,11 @@
+/**********************************************************************
+ * @file StopWatch.java
+ * @brief creates timer for second mode
+ * @author Tim Hultan, Jeevan Graywal, Roman Conway, Jack Cutler
+ * @date: Nov 30
+ * @acknowledgement: https://www.youtube.com/watch?v=oLirZqJFKPE
+ ***********************************************************************/
+
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;

@@ -1,6 +1,6 @@
 /**********************************************************************
  * @file Slider.java
- * @brief holds main method
+ * @brief helps develops AI paddle
  * @author Tim Hultan, Jeevan Graywal, Roman Conway, Jack Cutler
  * @date: Nov 30
  * @acknowledgement: https://www.youtube.com/watch?v=oLirZqJFKPE
@@ -12,13 +12,10 @@ public class Slider extends Rectangle{
     int yVelocity;
     int speed = 10;
 
-
     Slider(int x, int y, int PADDLE_WIDTH, int PADDLE_HEIGHT){
         super(x,y,PADDLE_WIDTH,PADDLE_HEIGHT);
 
     }
-
-
 
 
     public void draw(Graphics g) {
