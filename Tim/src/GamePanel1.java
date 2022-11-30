@@ -38,7 +38,7 @@ public class GamePanel1 extends JPanel implements Runnable{
 
     public void newBall() {
         random = new Random();
-
+        // randomly places ball anywhere on the y axis
         ball = new Ball((GAME_WIDTH/2)-(BALL_DIAMETER/2),random.nextInt(GAME_HEIGHT-BALL_DIAMETER),BALL_DIAMETER,BALL_DIAMETER,7);
 
     }
@@ -104,12 +104,14 @@ public class GamePanel1 extends JPanel implements Runnable{
             score.player2++;
             newPaddles();
             newBall();
+            // make ball start in a random location
             System.out.println("Player 2: "+score.player2);
         }
         if(ball.x >= GAME_WIDTH-BALL_DIAMETER) {
             score.player1++;
             newPaddles();
             newBall();
+            // make ball start in a random location
             System.out.println("Player 1: "+score.player1);
         }
     }

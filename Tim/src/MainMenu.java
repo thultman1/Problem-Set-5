@@ -13,7 +13,7 @@ public class MainMenu extends Rectangle{
 
 
         g.setColor(Color.white);
-        g.setFont(new Font("Monospaced", Font.PLAIN, 30));
+        g.setFont(new Font("Monospaced", Font.ITALIC, 30));
         g.drawString("PONG GAME", 425, 200);
         g.setFont(new Font("Monospaced", Font.ITALIC, 18));
         g.drawString("Press 1 to play 2v2", 425, 260);
