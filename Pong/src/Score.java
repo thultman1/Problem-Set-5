@@ -1,5 +1,11 @@
 import java.awt.*;
-
+/**********************************************************************
+ * @file Score.java
+ * @brief helps create score board
+ * @author Tim Hultan, Jeevan Graywal, Roman Conway, Jack Cutler
+ * @date: Nov 30
+ * @acknowledgement: https://www.youtube.com/watch?v=oLirZqJFKPE
+ ***********************************************************************/
 public class Score extends Rectangle{
 
     static int GAME_WIDTH;

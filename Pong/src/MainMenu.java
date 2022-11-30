@@ -1,3 +1,11 @@
+/**********************************************************************
+ * @file MainMenu.java
+ * @brief allows users to choose game mode
+ * @author Tim Hultan, Jeevan Graywal, Roman Conway, Jack Cutler
+ * @date: Nov 30
+ * @acknowledgement: https://www.youtube.com/watch?v=oLirZqJFKPE
+ ***********************************************************************/
+
 import java.awt.*;
 
 public class MainMenu extends Rectangle{

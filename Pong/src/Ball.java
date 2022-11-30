@@ -1,3 +1,12 @@
+/**********************************************************************
+ * @file Ball.java
+ * @brief creating the ball and initializing velocity and direction
+ * @author Tim Hultman, Jeevan Graywal, Roman Conway, Jack Cutler
+ * @date: Nov 30
+ * @acknowledgement: https://www.youtube.com/watch?v=oLirZqJFKPE
+ ***********************************************************************/
+
+
 import java.awt.*;
 import java.util.*;
 

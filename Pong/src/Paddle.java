@@ -1,3 +1,10 @@
+/**********************************************************************
+ * @file Paddle.java
+ * @brief establishes users paddle
+ * @author Tim Hultan, Jeevan Graywal, Roman Conway, Jack Cutler
+ * @date: Nov 30
+ * @acknowledgement: https://www.youtube.com/watch?v=oLirZqJFKPE
+ ***********************************************************************/
 import java.awt.*;
 import java.awt.event.*;
 

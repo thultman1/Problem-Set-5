@@ -1,3 +1,11 @@
+/**********************************************************************
+ * @file GameFrame1.java
+ * @brief sets up first game canvas
+ * @author Tim Hultman, Jeevan Graywal, Roman Conway, Jack Cutler
+ * @date: Nov 30
+ * @acknowledgement: https://www.youtube.com/watch?v=oLirZqJFKPE
+ ***********************************************************************/
+
 import java.awt.*;
 import javax.swing.*;
 

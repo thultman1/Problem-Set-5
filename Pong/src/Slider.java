@@ -1,4 +1,10 @@
-
+/**********************************************************************
+ * @file Slider.java
+ * @brief holds main method
+ * @author Tim Hultan, Jeevan Graywal, Roman Conway, Jack Cutler
+ * @date: Nov 30
+ * @acknowledgement: https://www.youtube.com/watch?v=oLirZqJFKPE
+ ***********************************************************************/
 import java.awt.*;
 import java.awt.event.*;
 public class Slider extends Rectangle{

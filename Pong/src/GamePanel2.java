@@ -1,3 +1,11 @@
+/**********************************************************************
+ * @file GamePanel2.java
+ * @brief sets up second game mode and allows user to play in survival mode with timer and AI panel utilizing a best score method
+ * @author Tim Hultan, Jeevan Graywal, Roman Conway, Jack Cutler
+ * @date: Nov 30
+ * @acknowledgement: https://www.youtube.com/watch?v=oLirZqJFKPE
+ ***********************************************************************/
+
 import java.awt.*;
 import java.awt.event.*;
 import java.util.*;

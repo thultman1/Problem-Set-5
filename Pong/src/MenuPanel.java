@@ -1,9 +1,15 @@
+/**********************************************************************
+ * @file MenuPanel.java
+ * @brief creates JPanel
+ * @author Tim Hultan, Jeevan Graywal, Roman Conway, Jack Cutler
+ * @date: Nov 30
+ * @acknowledgement: https://www.youtube.com/watch?v=oLirZqJFKPE
+ ***********************************************************************/
+
 import java.awt.*;
 import java.awt.event.*;
 import java.util.*;
 import javax.swing.*;
-
-
 public class MenuPanel extends JPanel implements Runnable{
 
     static final int GAME_WIDTH = 1000;

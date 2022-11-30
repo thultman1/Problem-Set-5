@@ -1,3 +1,10 @@
+/**********************************************************************
+ * @file GamePanel1.java
+ * @brief sets up the first game mode where users can play against each other with scoreboard and ball gets randomly placed on y axis
+ * @author Tim Hultan, Jeevan Graywal, Roman Conway, Jack Cutler
+ * @date: Nov 30
+ * @acknowledgement: https://www.youtube.com/watch?v=oLirZqJFKPE
+ ***********************************************************************/
 import java.awt.*;
 import java.awt.event.*;
 import java.util.*;
