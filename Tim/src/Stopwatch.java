@@ -12,6 +12,14 @@ public class Stopwatch implements ActionListener {
     int seconds = 0;
     int minutes = 0;
     int hours = 0;
+    int prevTime = 0;
+    int prevHours = 0;
+    int prevSeconds = 0;
+    int prevMinutes = 0;
+    int bestTime = 0;
+    int bestSeconds = 0;
+    int bestMinutes = 0;
+    int bestHours = 0;
     boolean started = false;
     String seconds_string = String.format("%02d", seconds);
     String minutes_string = String.format("%02d", minutes);
@@ -48,9 +56,9 @@ public class Stopwatch implements ActionListener {
         g.setFont(new Font("Monospaced",Font.PLAIN,40));
         g.drawString(hours_string + ":" + minutes_string + ":" + seconds_string, (GAME_WIDTH/2) - 96, 50);
         g.setFont(new Font("Monospaced",Font.PLAIN,15));
-        g.drawString("PREV RUN: ---", (GAME_WIDTH/2) - 300, 50);
+        g.drawString("LAST TIME: " + String.format("%02d", prevHours) + ":" + String.format("%02d", prevMinutes) + ":" + String.format("%02d", prevSeconds), (GAME_WIDTH / 6), 50);
         g.setFont(new Font("Monospaced",Font.PLAIN,15));
-        g.drawString("BEST RUN: ---", (GAME_WIDTH/2) + 250, 50);
+        g.drawString("BEST TIME: "+ String.format("%02d", bestHours) + ":" + String.format("%02d", bestMinutes) + ":" + String.format("%02d", bestSeconds), ((GAME_WIDTH / 6) * 4), 50);
     }
 
     /*
@@ -93,6 +101,14 @@ public class Stopwatch implements ActionListener {
 
     void reset() {
         timer.stop();
+        prevTime = elapsedTime;
+        prevSeconds = seconds;
+        prevMinutes = minutes;
+        prevHours = hours;
+        if ((prevSeconds > bestSeconds) || (prevMinutes > bestMinutes)) {
+            bestSeconds = prevSeconds;
+            bestMinutes = prevMinutes;
+        }
         elapsedTime=0;
         seconds =0;
         minutes=0;
