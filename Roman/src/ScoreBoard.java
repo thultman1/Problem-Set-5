@@ -8,8 +8,6 @@ public class ScoreBoard {
     public void counter(){
         score++;
         System.out.println(score);
-
-
     }
 
 }

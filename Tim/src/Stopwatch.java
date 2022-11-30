@@ -53,11 +53,11 @@ public class Stopwatch implements ActionListener {
     }
 
     public void draw(Graphics g) {
-        g.setFont(new Font("Monospaced",Font.PLAIN,40));
+        g.setFont(new Font("Monospaced",Font.ITALIC,40));
         g.drawString(hours_string + ":" + minutes_string + ":" + seconds_string, (GAME_WIDTH/2) - 96, 50);
-        g.setFont(new Font("Monospaced",Font.PLAIN,15));
+        g.setFont(new Font("Monospaced",Font.ITALIC,15));
         g.drawString("LAST TIME: " + String.format("%02d", prevHours) + ":" + String.format("%02d", prevMinutes) + ":" + String.format("%02d", prevSeconds), (GAME_WIDTH / 6), 50);
-        g.setFont(new Font("Monospaced",Font.PLAIN,15));
+        g.setFont(new Font("Monospaced",Font.ITALIC,15));
         g.drawString("BEST TIME: "+ String.format("%02d", bestHours) + ":" + String.format("%02d", bestMinutes) + ":" + String.format("%02d", bestSeconds), ((GAME_WIDTH / 6) * 4), 50);
     }
 
